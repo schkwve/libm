@@ -42,7 +42,7 @@ mat matrix_alloc(unsigned int rows, unsigned int cols)
 	ret.rows = rows;
 	ret.cols = cols;
 
-	ret.elements = malloc(rows * sizeof(float));
+	ret.elements = malloc(rows * sizeof(float *));
 	for (unsigned int i = 0; i < rows; i++) {
 		ret.elements[i] = malloc(cols * sizeof(float));
 	}

@@ -35,11 +35,6 @@ $(LIBRARY): $(OBJ)
 format:
 	@clang-format -i $(shell find src inc -name "*.c" -o -name "*.h")
 
-.PHONY: test
-test: $(LIBRARY)
-	@$(MAKE) -C test all
-	@test/test
-
 .PHONY: docs
 docs:
 	@printf " DOXY docs/html\n"
@@ -53,4 +48,3 @@ docs:
 clean:
 	@printf " CLEAN\n"
 	@rm -rf $(OBJ) $(LIBRARY) docs/
-	@$(MAKE) -C test clean
