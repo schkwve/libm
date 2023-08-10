@@ -2,6 +2,11 @@
 
 Lightweight yet powerful C and C++ Math Library.
 
+## Eventual goals
+
+I want this library to become as much independent as possible, while the code still being lightweight and relevant to mathematics.
+It would be nice if I got to make this library easy to port, with a requirement of just **slight** modifications.
+
 ## TODO
  - Rewrite test suite
  - Add wrappers to OS-specific functions (malloc, free, ...) to ease porting
