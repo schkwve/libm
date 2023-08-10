@@ -46,6 +46,18 @@ vec vec_alloc(unsigned int dim)
 }
 
 /**
+ * @brief		Frees a vector's memory
+ * 
+ * @param v		The vector
+ */
+void vec_free(vec *v)
+{
+	free(v->elements);
+	v->dim = 0;
+	v->elements = NULL;
+}
+
+/**
  * @brief		Constructs a vector with a default value for all elements
  * 
  * @param dim	Dimension of the vector
