@@ -10,7 +10,7 @@
 CC := gcc
 AR := ar
 
-INTERNAL_CFLAGS := -O2 -g3 -Wall -Wextra -Werror -pedantic -std=c99
+INTERNAL_CFLAGS := -O2 -g3 -Wall -Wextra -Werror -pedantic -std=c99 -Iinc/
 
 CFLAGS += $(INTERNAL_CFLAGS)
 ARFLAGS := rcs
@@ -35,6 +35,11 @@ $(LIBRARY): $(OBJ)
 format:
 	@clang-format -i $(shell find src -name "*.c" -o -name "*.h")
 
+.PHONY: test
+test: $(LIBRARY)
+	@$(MAKE) -C test all
+	@test/test
+
 .PHONY: docs
 docs:
 	@printf " DOXY docs/html\n"
@@ -48,3 +53,4 @@ docs:
 clean:
 	@printf " CLEAN\n"
 	@rm -rf $(OBJ) $(LIBRARY) docs/
+	@$(MAKE) -C test clean
