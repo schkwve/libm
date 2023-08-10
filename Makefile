@@ -33,7 +33,7 @@ $(LIBRARY): $(OBJ)
 
 .PHONY: format
 format:
-	@clang-format -i $(shell find src -name "*.c" -o -name "*.h")
+	@clang-format -i $(shell find src inc -name "*.c" -o -name "*.h")
 
 .PHONY: test
 test: $(LIBRARY)

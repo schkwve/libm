@@ -27,7 +27,7 @@
 
 #include <math.h>
 
-const vec VEC_UNDEFINED = {0, NULL};
+const vec VEC_UNDEFINED = { 0, NULL };
 
 /**
  * @brief		Allocates memory for a vector
@@ -114,7 +114,7 @@ void vec_print(vec v)
 	for (unsigned int i = 0; i < v.dim; i++) {
 		printf("%f", v.elements[i]);
 
-		if (i < v.dim-1) {
+		if (i < v.dim - 1) {
 			printf(", ");
 		}
 	}
@@ -469,7 +469,7 @@ void vec_scalar_div_by(vec *v, float k)
 vec power(vec v, float k)
 {
 	vec ret = vec_alloc(v.dim);
-	
+
 	for (unsigned int i = 0; i < ret.dim; i++) {
 		ret.elements[i] = powf(v.elements[i], k);
 	}
@@ -545,9 +545,12 @@ vec cross(vec a, vec b)
 
 	vec ret = vec_alloc(3);
 
-	ret.elements[0] = (a.elements[1] * b.elements[2]) - (a.elements[2] * b.elements[1]);
-	ret.elements[1] = -1 * ((a.elements[0] * b.elements[2]) - (a.elements[2] * b.elements[0]));
-	ret.elements[2] = (a.elements[0] * b.elements[1]) - (a.elements[1] * b.elements[0]);
+	ret.elements[0] =
+		(a.elements[1] * b.elements[2]) - (a.elements[2] * b.elements[1]);
+	ret.elements[1] = -1 * ((a.elements[0] * b.elements[2]) -
+							(a.elements[2] * b.elements[0]));
+	ret.elements[2] =
+		(a.elements[0] * b.elements[1]) - (a.elements[1] * b.elements[0]);
 
 	return ret;
 }
@@ -600,7 +603,7 @@ vec vec_normalized(vec v)
 	for (unsigned int i = 0; i < ret.dim; i++) {
 		ret.elements[i] = v.elements[i] / mag_sq;
 	}
-	
+
 	return ret;
 }
 
