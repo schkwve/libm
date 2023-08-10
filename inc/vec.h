@@ -192,7 +192,7 @@ bool vec_div_by(vec *a, vec b);
  * 
  * @return		The multiplied vector
  */
-vec scalar_mult(vec v, float k);
+vec vec_scalar_mult(vec v, float k);
 
 /**
  * @brief		Directly multiplies the values of a vector by a scalar
@@ -200,7 +200,7 @@ vec scalar_mult(vec v, float k);
  * @param v		The vector
  * @param k		The scalar
  */
-void scalar_mult_by(vec *v, float k);
+void vec_scalar_mult_by(vec *v, float k);
 
 /**
  * @brief		Divides the values of a vector by a scalar
@@ -210,7 +210,7 @@ void scalar_mult_by(vec *v, float k);
  * 
  * @return		The divided vector
  */
-vec scalar_div(vec v, float k);
+vec vec_scalar_div(vec v, float k);
 
 /**
  * @brief		Directly divides the values of a vector by a scalar
@@ -218,7 +218,7 @@ vec scalar_div(vec v, float k);
  * @param v		The vector
  * @param k		The scalar
  */
-void scalar_div_by(vec *v, float k);
+void vec_scalar_div_by(vec *v, float k);
 
 /**
  * @brief		Raises the values of a vector to a scalar

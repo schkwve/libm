@@ -338,7 +338,7 @@ bool vec_div_by(vec *a, vec b)
  * 
  * @return		The multiplied vector
  */
-vec scalar_mult(vec v, float k)
+vec vec_scalar_mult(vec v, float k)
 {
 	vec ret = vec_alloc(v.dim);
 
@@ -355,7 +355,7 @@ vec scalar_mult(vec v, float k)
  * @param v		The vector
  * @param k		The scalar
  */
-void scalar_mult_by(vec *v, float k)
+void vec_scalar_mult_by(vec *v, float k)
 {
 	for (unsigned int i = 0; i < v->dim; i++) {
 		v->elements[i] *= k;
@@ -370,7 +370,7 @@ void scalar_mult_by(vec *v, float k)
  * 
  * @return		The divided vector
  */
-vec scalar_div(vec v, float k)
+vec vec_scalar_div(vec v, float k)
 {
 	vec ret = vec_alloc(v.dim);
 
@@ -387,7 +387,7 @@ vec scalar_div(vec v, float k)
  * @param v		The vector
  * @param k		The scalar
  */
-void scalar_div_by(vec *v, float k)
+void vec_scalar_div_by(vec *v, float k)
 {
 	for (unsigned int i = 0; i < v->dim; i++) {
 		v->elements[i] /= k;
