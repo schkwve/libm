@@ -331,6 +331,70 @@ bool vec_div_by(vec *a, vec b)
 }
 
 /**
+ * @brief		Adds a scalar to the values of a vector
+ * 
+ * @param v		The vector
+ * @param k		The scalar
+ * 
+ * @return		The summed vector
+ */
+vec vec_scalar_add(vec v, float k)
+{
+	vec ret = vec_alloc(v.dim);
+
+	for (unsigned int i = 0; i < ret.dim; i++) {
+		ret.elements[i] = v.elements[i] + k;
+	}
+
+	return ret;
+}
+
+/**
+ * @brief		Directly adds a scalar to the values of a vector
+ * 
+ * @param v		The vector
+ * @param k		The scalar
+ */
+void vec_scalar_add_to(vec *v, float k)
+{
+	for (unsigned int i = 0; i < v->dim; i++) {
+		v->elements[i] += k;
+	}
+}
+
+/**
+ * @brief		Subtracts a scalar from the values of a vector
+ * 
+ * @param v		The vector
+ * @param k		The scalar
+ * 
+ * @return		The subtracted vector
+ */
+vec vec_scalar_sub(vec v, float k)
+{
+	vec ret = vec_alloc(v.dim);
+
+	for (unsigned int i = 0; i < ret.dim; i++) {
+		ret.elements[i] = v.elements[i] - k;
+	}
+
+	return ret;
+}
+
+/**
+ * @brief		Directly subtracts a scalar from the values of a vector
+ * 
+ * @param v		The vector
+ * @param k		The scalar
+ */
+void vec_scalar_sub_from(vec *v, float k)
+{
+	for (unsigned int i = 0; i < v->dim; i++) {
+		v->elements[i] -= k;
+	}
+}
+
+/**
  * @brief		Multiplies the values of a vector by a scalar
  * 
  * @param v		The vector

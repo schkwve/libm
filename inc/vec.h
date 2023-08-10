@@ -185,6 +185,42 @@ vec vec_div(vec a, vec b);
 bool vec_div_by(vec *a, vec b);
 
 /**
+ * @brief		Adds a scalar to the values of a vector
+ * 
+ * @param v		The vector
+ * @param k		The scalar
+ * 
+ * @return		The summed vector
+ */
+vec vec_scalar_add(vec v, float k);
+
+/**
+ * @brief		Directly adds a scalar to the values of a vector
+ * 
+ * @param v		The vector
+ * @param k		The scalar
+ */
+void vec_scalar_add_to(vec *v, float k);
+
+/**
+ * @brief		Subtracts a scalar from the values of a vector
+ * 
+ * @param v		The vector
+ * @param k		The scalar
+ * 
+ * @return		The subtracted vector
+ */
+vec vec_scalar_sub(vec v, float k);
+
+/**
+ * @brief		Directly subtracts a scalar from the values of a vector
+ * 
+ * @param v		The vector
+ * @param k		The scalar
+ */
+void vec_scalar_sub_from(vec *v, float k);
+
+/**
  * @brief		Multiplies the values of a vector by a scalar
  * 
  * @param v		The vector
