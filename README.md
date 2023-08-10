@@ -4,7 +4,7 @@ Lightweight yet powerful C and C++ Math Library.
 
 ## TODO
  - Rewrite test suite
- - Document functions
+ - Add wrappers to OS-specific functions (malloc, free, ...) to ease porting
 
 ## Contributing
 
