@@ -25,14 +25,11 @@ PROGRAM := test
 all: $(PROGRAM)
 
 $(PROGRAM): $(OBJ)
-	@printf " LD   $@\n"
 	@$(LD) $(LDFLAGS) $(OBJ) ../libm.a -o $@
 
 %.o: %.c
-	@printf " CC   $^\n"
 	@$(CC) $(CFLAGS) -c $< -o $@
 
 .PHONY: clean
 clean:
-	@printf " CLEAN\n"
 	@rm -rf $(OBJ) $(PROGRAM)

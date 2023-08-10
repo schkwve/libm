@@ -17,12 +17,12 @@
  *
  */
 
-#ifndef __VEC_H_
-#define __VEC_H_
+#ifndef __LIBM_H_
+#define __LIBM_H_
 
-typedef struct {
-	unsigned int dim;
-	float *elements;
-} vec;
+/**
+ * @brief
+ */
+#define NUMARGS(type, ...) (sizeof((type[]){0.0f,__VA_ARGS__}) / sizeof(type) - 1)
 
-#endif // __VEC_H_
+#endif // __LIBM_H_

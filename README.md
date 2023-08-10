@@ -1,6 +1,10 @@
 # LibM
 
-Lightweight yet powerful C and C++ Math Library made to ease OS Development.
+Lightweight yet powerful C and C++ Math Library.
+
+## TODO
+ - Rewrite test suite
+ - Document functions
 
 ## Contributing
 
