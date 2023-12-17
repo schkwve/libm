@@ -1,7 +1,1 @@
-.vscode/
-docs/
-
 .DS_Store
-*.o
-*.a
-test/test
